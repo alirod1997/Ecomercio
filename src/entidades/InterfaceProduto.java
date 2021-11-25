@@ -2,6 +2,6 @@ package entidades;
 
 public interface InterfaceProduto {
 
-	void calculaImpostoProduto(double impostoCalculado);
+	void calcularImpostoProduto(double impostoCalculado);
 	
 }

@@ -1,21 +1,15 @@
 package entidades;
 
 public class ProdutoUsado extends Produto implements InterfaceProduto{
-	private double imposto;
+	public double imposto;
 
-	public double getImposto() {
-		return imposto;
-	}
-
-	public void setImposto(double imposto) {
-		this.imposto = imposto;
-	}
-
+	public ProdutoUsado() {}
+	
 	//
 	@Override
-	public void calculaImpostoProduto(double impostoCalculado) {
+	public void calcularImpostoProduto(double impostoCalculado) {
 		double taxaProdutosUsados = 0.10;
-		imposto += getImposto() + getPreco() * taxaProdutosUsados;		
+		imposto += imposto + preco * taxaProdutosUsados;		
 	}
 	
 	
