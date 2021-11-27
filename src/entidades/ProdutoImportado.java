@@ -1,16 +1,22 @@
 package entidades;
 
 public class ProdutoImportado extends Produto implements InterfaceProduto{
-	public double imposto;
+	public double imposto = 9.45;
 	
 	public ProdutoImportado() {}
 	
 	//
 	@Override
-	public void calcularImpostoProduto(double impostoCalculado) {
-		double taxaProdutosImportados = 0.30;
-		imposto += imposto + preco * taxaProdutosImportados;
+	public double calcularImpostoProduto() {
+		return this.preco + imposto;
 	}
+
+	@Override
+	public String toString() {
+		
+		return super.toString();
+	}
+	
 	
 	
 }

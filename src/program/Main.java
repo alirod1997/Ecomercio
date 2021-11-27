@@ -1,43 +1,36 @@
 package program;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import entidades.Produto;
+import dados.CarrinhoCompras;
+import entidades.ProdutoImportado;
+import entidades.ProdutoUsado;
 
 public class Main {
 
 	public static void main(String[] args) {
-		//CarrinhoCompras carrinho = new CarrinhoCompras();
-		List<Produto> lista = new ArrayList<Produto>();
+		CarrinhoCompras carrinho = new CarrinhoCompras();
+		//List<Produto> lista = new ArrayList<Produto>();
 		
-		Produto p1 = new Produto();
+		ProdutoImportado p1 = new ProdutoImportado();
 		p1.id = 1;
 		p1.descricao = "base de refrigeração de notebook 50 cm";
 		p1.preco = 25.45;
+		p1.calcularImpostoProduto();
 		
-		Produto p2 = new Produto();
+		
+		ProdutoUsado p2 = new ProdutoUsado();
 		p2.id = 2;
-		p2.descricao = "monitor widescreen haotv";
+		p2.descricao = "base de refrigeração de notebook 50 cm";
 		p2.preco = 25.45;
+		p2.calcularImpostoProduto();
+		//lista.forEach(System.out::println);
+		System.out.println(p1.calcularImpostoProduto());
+
+		System.out.println(p2.calcularImpostoProduto());
 		
-		Produto p3 = new Produto();
-		p3.id = 3;
-		p3.descricao = "teclado mecanico switch blue techmurder";
-		p3.preco = 25.45;
+		carrinho.lista.add(p1);
+		carrinho.lista.add(p2);
 		
-//		carrinho.adicionarAoCarrinho(p1);
-//		carrinho.adicionarAoCarrinho(p2);
-//		carrinho.adicionarAoCarrinho(p3);
-//		
-//		carrinho.lista.forEach(System.out::println);
-		
-		
-		lista.add(p1);
-		lista.add(p2);
-		lista.add(p3);
-		
-		lista.forEach(System.out::println);
+//		System.out.println(carrinho);
 	}
 
 }

@@ -13,4 +13,8 @@ public class Produto {
 		this.preco = preco;
 	}
 	
+	public String toString() {
+		return "Id >"+id+"\nDescricao >"+descricao+"\nPreco >"+preco+"\n----";
+	}
+	
 }
