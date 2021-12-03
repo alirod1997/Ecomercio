@@ -5,6 +5,10 @@ public class ProdutoImportado extends Produto implements InterfaceProduto{
 	
 	public ProdutoImportado() {}
 	
+	public ProdutoImportado(int id, String descricao, double preco) {
+		super(id, descricao, preco);
+	}
+
 	//
 	@Override
 	public double calcularImpostoProduto() {
@@ -13,8 +17,7 @@ public class ProdutoImportado extends Produto implements InterfaceProduto{
 
 	@Override
 	public String toString() {
-		
-		return super.toString();
+		return super.toString() + "preço de produto importado já com imposto inserido >R$"+calcularImpostoProduto();
 	}
 	
 	

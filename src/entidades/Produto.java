@@ -14,7 +14,7 @@ public class Produto {
 	}
 	
 	public String toString() {
-		return "Id >"+id+"\nDescricao >"+descricao+"\nPreco >"+preco+"\n----";
+		return "Id >"+id+"\nDescricao >"+descricao+"\nPreco >R$"+preco+"\n----";
 	}
 	
 }

@@ -1,36 +1,23 @@
 package program;
 
-import dados.CarrinhoCompras;
+import dados.BancoDadosCliente;
+import dados.ServiceProduto;
+import entidades.PessoaFisica;
 import entidades.ProdutoImportado;
-import entidades.ProdutoUsado;
 
 public class Main {
 
 	public static void main(String[] args) {
-		CarrinhoCompras carrinho = new CarrinhoCompras();
-		//List<Produto> lista = new ArrayList<Produto>();
+		ProdutoImportado produto = new ProdutoImportado(1, "base refrigerada para notebook", 350.00);
+		PessoaFisica pf = new PessoaFisica("josnei", "josneiemail@gmail.com", "5550102", produto, "043020239213");
 		
-		ProdutoImportado p1 = new ProdutoImportado();
-		p1.id = 1;
-		p1.descricao = "base de refrigeração de notebook 50 cm";
-		p1.preco = 25.45;
-		p1.calcularImpostoProduto();
+		BancoDadosCliente BDC = BancoDadosCliente.getInstance();
+		BDC.salvar(pf);
 		
+		ServiceProduto sp = new ServiceProduto();
+		sp.carrinho.adicionarAoCarrinho(produto);
+		sp.salvar(produto);
 		
-		ProdutoUsado p2 = new ProdutoUsado();
-		p2.id = 2;
-		p2.descricao = "base de refrigeração de notebook 50 cm";
-		p2.preco = 25.45;
-		p2.calcularImpostoProduto();
-		//lista.forEach(System.out::println);
-		System.out.println(p1.calcularImpostoProduto());
-
-		System.out.println(p2.calcularImpostoProduto());
-		
-		carrinho.lista.add(p1);
-		carrinho.lista.add(p2);
-		
-//		System.out.println(carrinho);
 	}
 
 }

@@ -7,5 +7,5 @@ public interface InterfaceCarrinhoCompras {
 	
 	public void removerDoCarrinho(Produto produto);
 	
-	//public void exibirItensDoCarrinho(Produto Produto);
+	public void validaVazio(Produto produto);
 }
