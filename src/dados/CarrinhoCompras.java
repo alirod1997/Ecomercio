@@ -8,7 +8,8 @@ import javax.swing.JOptionPane;
 import entidades.Produto;
 
 public class CarrinhoCompras implements InterfaceCarrinhoCompras{
-	private List<Produto> lista = new ArrayList<>();
+	public List<Produto> lista = new ArrayList<>();
+	public boolean validaVazio;
 
 	@Override
 	public void adicionarAoCarrinho(Produto produto) {

@@ -15,6 +15,8 @@ public class Pessoa {
 		this.produto = produto;
 	}
 	
-	
+	public String tosString() {
+		return "\nCliente fez a compra: \n"+nome+"\nemail: "+email+"\ntelefone: "+telefone+"\nproduto: "+produto;
+	}
 	
 }

@@ -17,10 +17,15 @@ e banco de dados somente com o tratamento do cliente.
 
 2- principio do aberto e fechado (O) > foi criado mais de um tipo de produto, sendo que a classe base tem propriedades que podem ser extendidas, não sendo necessário modificar diretamente na classe pai, mas podem ser acrescentadas as modificações nas classes filhas ex: produto importado e produto usado.
 
-3-
+3- devendo
 
 uso de padrões de projeto
 
 1-singleton : usado padrão na classe de Banco de dados do cliente, pois não tem a necessidade de instalanciar um novo objeto deste mesmo tipo mais de uma vez
 
-2- 
+2- devendo
+
+
+thread que verifica se o carrinho está vazio
+
+aplicação foi dividida em camadas 

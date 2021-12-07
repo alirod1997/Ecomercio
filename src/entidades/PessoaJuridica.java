@@ -10,4 +10,8 @@ public class PessoaJuridica extends Pessoa{
 		this.cnpj = cnpj;
 	}
 	
+	@Override
+	public String tosString() {
+		return super.tosString()+"cliente pessoa juridica portador do cnpj ------->"+cnpj;
+	}
 }

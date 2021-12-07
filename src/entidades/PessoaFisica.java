@@ -10,5 +10,8 @@ public class PessoaFisica extends Pessoa{
 		this.cpf = cpf;
 	}
 	
-	
+	@Override
+	public String tosString() {
+		return super.tosString()+"cliente pessoa física portador do cpf ------->"+cpf;
+	}
 }
